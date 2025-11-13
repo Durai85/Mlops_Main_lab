@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iris Flower Prediction</title>
+</head>
+<body>
+    <h1>Iris Flower Prediction</h1>
+    <form action="/prediction" method="post">
+        <label for="sepLen">Sepel Length: </label>
+        <input type="text" id="sepLen" name="sepLen">
+        <label for="sepWid">Sepel Width: </label>
+        <input type="text" id="sepWid" name="sepWid">
+        <label for="petLen">Petel Length: </label>
+        <input type="text" id="petLen" name="petLen">
+        <label for="petWid">Petel Width: </label>
+        <input type="text" id="petWid" name="petWid">
+        <button type="submit">Predict</button>
+        {% if result %}
+            <h3>Result: {{result}}</h3>
+        {% endif %}
+    </form>
+</body>
+</html>
